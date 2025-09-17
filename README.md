@@ -10,42 +10,39 @@
 
 ## 目录结构
 ```
-red_chamber_deepseek_translation_json/
-├─ chapters/                      # 《红楼梦》各章节
-├─ input/                         # 《红楼梦》全文txt文件
-├─ output/                        # 中英对照《红楼梦》AI译文
-├─ translations/                  # 《红楼梦》AI译文
+hongloumeng_AItranslate/
+├─ input/                         # 存放《红楼梦》全文txt文件
+├─ chapters/                      # 存放《红楼梦》各章节
+├─ translations/                  # 存放《红楼梦》AI译文
+├─ output/                        # 存放中英对照《红楼梦》AI译文
+
+├─ requirements.txt               #环境要求
 ├─ split.py                       #分章脚本：将《红楼梦》全文按章节分段
 ├─ translate.py                   #翻译脚本：调用deepseekV3.1 reasoner进行翻译
 ├─ generate.py                    #生成脚本：生成中英对照html文件
-├─ requirements.txt               #环境要求
 ├─ README.md
 ```
 
 ## 快速开始（Google Colab）
 
-1. 上传《红楼梦》原始 TXT 文件到 `input/hongloumeng.txt`
-
-2. 安装依赖
+1. 安装依赖
 ```bash
 !pip install -r requirements.txt
 ```
 
-3. 切分章节
+2. 切分章节
 ```bash
-!python3 split.py
+!python3 split.py    #切分结果位于chapters/
 ```
 
-4. 翻译章节（请先设置 API Key）
+3. 翻译章节
 ```python
 import os
-os.environ["DEEPSEEK_API_KEY"] = "你的API_KEY"
-!python3 translate.py --model deepseek-reasoner  #这里也可以使用deepseek-chat模式
+os.environ["DEEPSEEK_API_KEY"] = "你的API_KEY"    #这里设置你的API
+!python3 translate.py --model deepseek-reasoner    #这里也可以使用deepseek-chat模式；翻译结果位于translations/
 ```
 
-5. 生成 HTML 对照
+4. 生成中英文对照对照
 ```bash
-!python3 generate.py
+!python3 generate.py   #输出结果位于output/hongloumeng_ZHvsEN.html
 ```
-
-6. 输出文件位于 `output/hongloumeng_ZHvsEN.html`
