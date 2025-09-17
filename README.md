@@ -2,8 +2,10 @@
 
 ## 简介
 使用DeepSeek-V3.1模型的reasoner模式，将《红楼梦》从中文翻译为英文，并以中英对照的形式呈现   
-**本项目仅作为学术研究使用**  
-可联系ziyang.zeng@upf.edu或zengziyang@foxmail.com
+翻译耗时较长，但无需担心，translate.py脚本能够自动跳过已翻译内容，继续翻译未翻译的章节
+
+**本项目仅作为学术研究使用**，学术合作可联系ziyang.zeng@upf.edu或zengziyang@foxmail.com
+
 
 ## 致谢
 本项目《红楼梦》全文文件来自项目：[red-chamber-llm] https://github.com/turbo-duck/red-chamber-llm/blob/main/01-txt/red-chamber.txt
