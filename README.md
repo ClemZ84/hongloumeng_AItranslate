@@ -48,4 +48,4 @@ os.environ["DEEPSEEK_API_KEY"] = "你的API_KEY"
 !python3 generate.py
 ```
 
-6. 输出文件位于 `output/hongloumeng.html`
+6. 输出文件位于 `output/hongloumeng_ZHvsEN.html`
