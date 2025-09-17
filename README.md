@@ -26,7 +26,7 @@ hongloumeng_AItranslate/
 
 ├─ requirements.txt               #环境要求
 ├─ split.py                       #分章脚本：将《红楼梦》全文按章节分段
-├─ translate.py                   #翻译脚本：调用deepseekV3.1 reasoner进行翻译
+├─ translate.py                   #翻译脚本：调用deepseekV3.1 reasoner进行翻译，可在此修改prompt
 ├─ generate.py                    #生成脚本：生成中英对照html文件
 ├─ README.md
 ```
@@ -48,7 +48,7 @@ hongloumeng_AItranslate/
 3. 翻译章节
 ```python
 import os
-os.environ["DEEPSEEK_API_KEY"] = "你的API_KEY"    #这里设置你的API
+os.environ["DEEPSEEK_API_KEY"] = "你的API_KEY"    #这里设置API
 !python3 translate.py --model deepseek-reasoner    #这里也可以使用deepseek-chat模式；翻译结果位于translations/
 ```
 
