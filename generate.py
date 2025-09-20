@@ -6,7 +6,7 @@ TEMPLATE = """
 <html>
 <head>
 <meta charset="utf-8">
-<title>红楼梦中英对照</title>
+<title>《红楼梦》中英对照（AI翻译）</title>
 <style>
   body {
     margin: 20px;
@@ -39,7 +39,7 @@ TEMPLATE = """
 </style>
 </head>
 <body>
-<h1 style="text-align:center;">《红楼梦》 中英对照</h1>
+<h1 style="text-align:center;">《红楼梦》中英对照（AI翻译）</h1>
 <div class="meta">
   <div class="zh">本对照版仅作学术研究使用</div>
 </div>
