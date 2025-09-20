@@ -28,10 +28,21 @@ TEMPLATE = """
     background: #fafafa;
     margin: 0;
   }
+  .meta {
+    margin: 15px 0 30px 0;
+    line-height: 1.5;
+    font-size: 14pt; /* 四号 */
+    font-weight: bold;
+  }
+  .meta .zh { font-family: SimSun, serif; }
+  .meta .en { font-family: "Times New Roman", serif; }
 </style>
 </head>
 <body>
 <h1 style="text-align:center;">《红楼梦》 中英对照</h1>
+<div class="meta">
+  <div class="zh">本对照版仅作学术研究使用</div>
+</div>
 {% for ch in chapters %}
 <div class="chapter">
   <div class="title">{{ch.title}}</div>
